@@ -1,0 +1,18 @@
+
+<div class="outer">
+<div class="parent">
+  <h2>Parent Component</h2>
+ 
+ 
+  <input type="text" placeholder="Message to Child" #mchild> <button (click)="sendChild(mchild.value);mchild.value=''">Send</button>
+
+  <p>Message from Child : </p>
+ 
+  <ul>
+    <li *ngFor="let bev of beverages"><strong>{{bev}}</strong></li>
+  </ul>
+
+
+  <app-child [beverage]="currentBeverage" (newBeverageEvent)="addBeverage($event)"></app-child>
+</div>
+</div>

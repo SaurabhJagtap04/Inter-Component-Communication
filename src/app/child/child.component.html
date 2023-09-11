@@ -1,0 +1,13 @@
+<div class="child">
+  <h2>Child Component</h2>
+ 
+  <input type="text" id="beverage-input" placeholder="Message to Parent" #newBeverage>
+  <button (click)="addNewBeverage(newBeverage.value);newBeverage.value=''">Send</button>
+
+  <p>Message from Parnet :</p>
+
+  <ul>
+    <li *ngFor="let bev of beverages"><strong>{{bev}}</strong></li>
+  </ul>
+
+</div>
